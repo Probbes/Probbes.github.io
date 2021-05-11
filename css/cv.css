@@ -1,10 +1,11 @@
+body{
+	background-color:gray;
+}
+
 .main {
 	background: white;
-	border-top: 1vw solid #666;
-	border-right: 16vw solid #666;
-	border-bottom: 10vw solid #666;
-	border-left: 10vw solid #666;
-	margin:-10px;
+
+	margin:auto;
 	font: normal Verdana, Geneva, sans-serif;
 	font-size:1.2vw;
 	width: 75%;
@@ -101,16 +102,36 @@ margin-right: 40px;
 	font: bold 18px/1 Verdana, Geneva, sans-serif;
 	font-size:1vw;
 }
-	
+
 .date{
 	float:left;
 	background-color:#eee;
 	height:100%;
 	width:7%;
-		font: bold 18px/1 Verdana, Geneva, sans-serif;
+	font: bold 18px/1 Verdana, Geneva, sans-serif;
+}
+	
+.date1{
+	margin-top:3vw;
+	margin-left:1.5%;
 	text-align:center;
 
 }
+
+.date2{
+	margin-top:47.5vw;
+	margin-left:1.5%;
+	text-align:center;
+
+}
+
+.date3{
+	margin-top:9.5vw;
+	margin-left:1.5%;
+	text-align:center;
+
+}
+
 
 .droite {
 	
@@ -141,7 +162,7 @@ margin-right: 40px;
 
 
 .txt1 {
-		margin-left:1.5%;
+	margin-left:1.5%;
 	font-size:1.1vw;
 
 }
