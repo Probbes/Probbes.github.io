@@ -1,0 +1,104 @@
+@font-face {
+	src : url(fonts/Karla-Bold.ttf);
+	font-family: karla;
+}
+
+@font-face {
+	src : url(fonts/Spectral-Medium.ttf);
+	font-family:spectral;
+}
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color:#F6F3F2;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 2fr 12fr 2fr;
+	grid-template-rows: 1fr 8fr 1fr;
+}
+
+.header {
+	grid-column: 1/4;
+	grid-row: 1;
+	background-color:#9D715C;
+	display: grid;
+	grid-template-columns: 3fr 2fr 1fr 1fr 1fr 1fr 1fr;
+	grid-auto-rows: 1fr;
+	padding:2%;
+	padding-left:10%;
+	padding-right:10%;
+	text-align:center;
+	align-items:center;
+	column-gap:1vw;
+	color:white;
+}
+
+.headerName {
+	grid-column:1;
+	font-size:1.8em;
+	font-family: karla;
+}
+
+button {
+	font-size:1.5em;
+	font-family: karla;
+	width:100%;
+	height:100%;
+	border:none;
+	border-radius:8%;
+	background-color: #AC8472;
+	text-align:center;
+	color:white;
+}
+
+button:hover {
+	background-color:#D2BBB2;
+	cursor:pointer;
+}
+
+.buttonHome {
+	grid-column:4;
+	
+}
+
+.buttonCV {
+	grid-column:5;
+	
+}
+
+.buttonPort {
+	grid-column:6;
+}
+
+.buttonLang {
+	grid-column:7;
+}
+
+.main {
+	grid-column: 2;
+	grid-row: 2;
+	background-color:#D1C3BC;
+	font-size:1.6em;
+	font-family: spectral;
+	padding:8%;
+	text-align: justify;
+}
+
+.footer {
+	grid-column: 1/4;
+	grid-row: 3;
+	background-color: #3E3736;
+	font:1.1em spectral, sans-serif;
+	color: #777;
+	padding:2%;
+	text-align:center;
+}
+
+
