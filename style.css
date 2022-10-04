@@ -4,8 +4,8 @@
 }
 
 @font-face {
-	src : url(fonts/Spectral-Medium.ttf);
-	font-family:spectral;
+	src : url(fonts/Montserrat-VariableFont_wght.ttf);
+	font-family:montserrat;
 }
 
 *{
@@ -21,13 +21,14 @@ body{
 .grid {
 	display: grid;
 	grid-template-columns: 2fr 12fr 2fr;
-	grid-template-rows: 1fr 8fr 1fr;
+	grid-template-rows: auto-rows;
 }
 
 .header {
 	grid-column: 1/4;
 	grid-row: 1;
 	background-color:#9D715C;
+	height:10vw;
 	display: grid;
 	grid-template-columns: 3fr 2fr 1fr 1fr 1fr 1fr 1fr;
 	grid-auto-rows: 1fr;
@@ -86,11 +87,20 @@ button:hover {
 	grid-row: 2;
 	background-color:#D1C3BC;
 	font-size:1.6em;
-	font-family: spectral;
+	font-family: montserrat;
+	font-weight:300;
 	padding:8%;
 	text-align: justify;
 }
 
+.mainPic{
+	height:300px;
+	float:left;
+}
+
+.mainTxt{
+	text-indent: 2vw;
+}
 .footer {
 	grid-column: 1/4;
 	grid-row: 3;
@@ -101,4 +111,79 @@ button:hover {
 	text-align:center;
 }
 
+.cvT1{
+	/* margin: 1vw;	 */
+	font-weight:600;
+	font-size: 1.6em;
+}
 
+.cvT2{
+	font-size: 1.3em;
+	font-weight:400;
+	margin:1vw;
+}
+
+.cvT3{
+	font-size:0.8em;
+	color:#777;
+}
+
+.cvTxt{
+	font-size:0.8em;
+}
+
+.logo{
+	width:1.5vw;
+}
+
+p{
+	padding: 0 0 0 2vw;
+}
+
+.gridOI{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.gridOIMontage{
+	grid-column:1;
+	grid-row:1;
+}
+
+.gridOI3D{
+	grid-column:2;
+	grid-row:1;
+}
+
+.gridOICompositing{
+	grid-column:3;
+	grid-row:1;
+}
+
+.gridOIAudio{
+	grid-column:1;
+	grid-row:2;
+}
+
+.gridOIProgrammation{
+	grid-column:2;
+	grid-row:2;
+}
+
+.gridOIBureautique{
+	grid-column:3;
+	grid-row:2;
+}
+
+iframe{
+	height:270px;
+	width:480px;
+	display:block;
+	text-align:center;
+	margin:auto;
+}
+
+.portTxt{
+	10px;
+	}
