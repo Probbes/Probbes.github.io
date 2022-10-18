@@ -6,7 +6,8 @@ function funcButton(i){
 	if (i==1) { document.getElementById("AccTitle").scrollIntoView({behavior: "smooth", block: "start"});  }
 	else if (i==2) { document.getElementById("PortTitle").scrollIntoView({behavior: "smooth", block: "start"});  }
 	else if (i==3) { document.getElementById("CVTitle").scrollIntoView({behavior: "smooth", block: "start"}); }
-	// else if (i==3) { console.log(window.pageYOffset) }
+	else if (i==4) { if (document.title == 'Antoine Megevand - fr') {window.location.href = './en.html';}
+					 else if (document.title == 'Antoine Megevand - en') {window.location.href = './index.html';}}
 }
 var x = 0;
 function tellY(){
