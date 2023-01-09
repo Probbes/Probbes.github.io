@@ -248,14 +248,16 @@ iframe{
 	grid-row:4;
 }
 
-.videoDocu{
+.videoLive{
 	grid-column: 1;
 	grid-row:5;
 }
 
-.videoConc{
+.imageHyper{
 	grid-column: 1;
 	grid-row:6;
+	height: 15vw;
+	width: 100%;
 }	
 
 .portGene{
@@ -282,13 +284,13 @@ iframe{
 	padding-left:5%;
 }
 
-.portDocu{
+.portLive{
 	grid-column:2;
 	grid-row:5;
 	padding-left:5%;
 }
 
-.portConc{
+.portHyper{
 	grid-column:2;
 	grid-row:6;
 	padding-left:5%;
