@@ -256,8 +256,11 @@ iframe{
 .imageHyper{
 	grid-column: 1;
 	grid-row:6;
-	height: 15vw;
-	width: 100%;
+	height:180px;
+	width:320px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }	
 
 .portGene{
@@ -470,7 +473,7 @@ iframe{
 
 	.portTxt{
 		display: grid;
-		grid-template-columns: auto;
+		grid-template-columns: 100%;
 		grid-template-rows: repeat(13,1fr);
 		font-size:0.9em;
 		row-gap:0%;
@@ -496,14 +499,16 @@ iframe{
 		grid-row:7;
 	}
 
-	.videoDocu{
+	.videoLive{
 		grid-column: 1;
 		grid-row:9;
 	}
 
-	.videoConc{
+	.imageHyper{
 		grid-column: 1;
 		grid-row:11;
+		height: 100%;
+		width: 100%;
 	}	
 
 	.portGene{
@@ -530,12 +535,12 @@ iframe{
 		grid-row:8;
 	}
 
-	.portDocu{
+	.portLive{
 		grid-column:1;
 		grid-row:10;
 	}
 
-	.portConc{
+	.portHyper{
 		grid-column:1;
 		grid-row:12;
 	}
