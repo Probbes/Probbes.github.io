@@ -15,7 +15,7 @@
 			<button  onclick="funcButton(1)" class="buttonHome"> Home </button>
 			<button  onclick="funcButton(2)" class="buttonPort"> Portfolio </button>
 			<button  onclick="funcButton(3)" class="buttonCV"> CV </button> 
-			<button  onclick="funcButton(4)" class="buttonLang"> <img class="drapeau" src="img/drapeaufrancerond.png" alt="cercle"> </button>
+			<button  onclick="funcButton(4)" class="buttonLang"> <img class="drapeau" src="img/logo/drapeaufrancerond.png" alt="cercle"> </button>
 		</div>
 		<div id="mainid" class= "main">
 		
@@ -33,44 +33,112 @@
 			
 			<div id ="PortTitle" ></div>
 			<div class="hidden">
-			<div class="T0">Portfolio</div>
-			<div class="portTxt">
-				<iframe class="videoGene" allowfullscreen src="https://www.youtube.com/embed/us3TAqTIHTQ"> </iframe>
-				<div class="portGene">
-				<div class="cvT2"> Credits for a short film </div>
-				End credits made for a short film for the first year of my Master's degree. <br />
-				Entirely made in 3D with Blender and After Effects. Concept and idea found in collaboration with the director. <br />
-				I modeled, textured and animated it all in Blender, then exported it in .exr for After Effects to add the text.
+				<div class="T0">Portfolio</div>
+				<div class = "portGrid">
+					<div class="portItem">	
+						<img class="portImage" src="img/gamejam.png"><!-- Game Jam -->
+						<iframe allowfullscreen src="https://www.youtube.com/embed/uZVWiw6LW-M"> </iframe>
+						<div class="info">
+							<h3>Game Jam</h3>
+							<p>Participation in a 5-day Game Jam during my internship at Notorious Frogs. </p>
+							<p>In a team of 4, I was in charge of modeling, texturing, rigging, animating and implementating in 
+							Unreal Engine the ennemies as well as the weapons.</p>
+						</div>
+					</div>
+					<div class="portItem">	
+						<img class="portImage" src="img/imgPeluche.png"><!-- Live Action -->
+						<iframe allowfullscreen src="https://www.youtube.com/embed/1od5GxeVlq8"> </iframe>
+						<div class="info">
+							<h3>Live action - Photogrammetry</h3>
+							<p>Incrustation of a photogrammetric object in a video.</p>
+							<p>The photogrammetric object of the plush was processed in Reality Capture, retopologized in Blender and textured with Adobe Substance Painter and Designer.</p>
+							<p>An original HDRI of the room was created before the shooting and imported into Maya for spatial lighting.</p>
+							<p>HDRI, tracking and compositing were done in Nuke.</p>
+
+						</div>
+					</div>
+					<div class="portItem">	
+						<img class="portImage" src="img/imgVR.png"><!-- VR -->
+						<iframe allowfullscreen src="https://www.youtube.com/embed/mvxP22vQO3Q"> </iframe>
+						<div class="info">
+							<h3>VR Environnement</h3>
+							<p>Creation of an immersive virtual reality environment for the final project of my master’s degree.
+							<p>I was responsible for creating the entirety of the environment on Unreal Engine by importing the team’s models and animations. 
+							I also created some animations and compiled the game for the Meta Quest 2 VR headset.</p>
+							<p>During the exhibition, I was in charge of the team that had to greet visitors in the VR room and put on the headsets.</p>
+						</div>
+					</div>
+					<div class="portItem">	
+						<img class="portImage" src="img/vulkan.png"><!-- Vulkan -->
+						<iframe allowfullscreen src="https://www.youtube.com/embed/AkCTsXczE_o"> </iframe>
+						<div class="info">
+							<h3>3D rendering engine - Vulkan</h3>
+							<p>Personal project to create a 3D rendering engine with C++ and Vulkan, which is lower level and more explicit than OpenGL.</p>
+							<p>The code can be found on my GitHub: https://github.com/Probbes/Vulkan_Project</p>
+						</div>
+					</div>
+					<div class="portItem">	
+						<img class="portImage" src="img/imgDV.png"><!-- Dernier Voeu -->
+						<iframe allowfullscreen src="https://www.youtube.com/embed/us3TAqTIHTQ"> </iframe>
+						<div class="info">
+							<h3>End credits</h3>
+							<p>End credits made for a short film during my first year of my master’s degree. Idea found in collaboration with the director.</p>
+							<p>I modeled, textured and animated on Blender and exported to After Effects in .exr to insert the text.</p>
+						</div>
+					</div>
+					<div class="portItem">	
+						<img class="portImage" src="img/imgT2.png"><!-- Type 2 -->
+						<iframe allowfullscreen src="https://www.youtube.com/embed/ZXlseIvIKRw"> </iframe>
+						<div class="info">
+							<h3>Augmented reality</h3>
+							<p>Creation of an exhibition in augmented reality for the end project of my bachelor’s degree. 
+							Paintings were displayed in the room and the user could see them move inside an Android tablet.</p>
+							<p>I was in charge of developing the AR application in Java on Android Studio.</p>
+						</div>
+					</div>
+					<div class="portItem">	
+						<img class="portImage" src="img/houdini.png"><!-- Houdini -->
+						<iframe allowfullscreen src="https://www.youtube.com/embed/xvSWXIi5dlk"> </iframe>
+						<div class="info">
+							<h3>Water simulation</h3>
+							<p>Making of a water simulation in Houdini following a tutorial.</p>
+						</div>
+					</div>
+					<div class="portItem">	
+						<img class="portImage" src="img/hyper.png"><!-- Maya 1 -->
+						<img class="portImageDeux" src="img/hyper.png">
+						<div class="info">
+							<h3>3D scene</h3>
+							<p>3D scene in Maya. Modeling, lighting and most of the texturing original.</p>
+						</div>
+					</div>
+					<div class="portItem">	
+						<img class="portImage" src="img/voeu.png"> <!-- Maya Voeux -->
+						<iframe allowfullscreen src="https://www.youtube.com/embed/t-hHf6Wsw4Q"> </iframe>
+						<div class="info">
+							<h3>Wish card</h3>
+							<p>Animation made in Maya with MASH.</p>
+						</div>
+					</div>
+					<div class="portItem">	
+						<img class="portImage" src="img/mocap.png"><!-- Mocap -->
+						<iframe allowfullscreen src="https://www.youtube.com/embed/PpDBDq4i-7I"> </iframe>
+						<div class="info">
+							<h3>Motion capture</h3>
+							<p>The motion capture performance was recorded in the university of Valenciennes, France. I then worked on the data and applied to a model.</p>
+						</div>
+					</div>
+					<div class="portItem">	
+						<img class="portImage" src="img/morrowind.png"><!-- Anim Morro -->
+						<iframe allowfullscreen src="https://www.youtube.com/embed/2JLRMKNixOQ"> </iframe>
+						<div class="info">
+							<h3>Animation</h3>
+							<p>Cette vidéo a été réalisée en autodidacte. Les fichiers appartiennent à Bethesda et viennent du jeu "Morrowind". </p>
+							<p>This video was made before my first year of my master's degree. The models are the properties of Bethesda and comes from Morrowind.</p>
+							<p>I recreated the scene by importing the files from the game, added lights, sky and effects. I then rigged and animated the characters.</p>
+						</div>
+					</div>
 				</div>
-				<iframe class="videoType2" allowfullscreen src="https://www.youtube.com/embed/ZXlseIvIKRw"> </iframe>
-				<div class="portType2">
-				<div class="cvT2"> Exhibition </div>
-				A small exhibition in augmented reality made with a group of six for the end of our Bachelor's degree project. <br />
-				Artworks were shown on the wall and an Android tablet was used to make the pictures come to life.
-				</div>
-				<iframe class="videoMO" allowfullscreen src="https://www.youtube.com/embed/PpDBDq4i-7I"> </iframe>
-				<div class="portMO">
-				<div class="cvT2"> Motion capture </div>
-				The shooting and cleaning of the motion capture was done inside the university. <br />
-				I treated it in Blender and applied it to an armature.
-				</div>
-				<iframe class="videoAnim" allowfullscreen src="https://www.youtube.com/embed/2JLRMKNixOQ"> </iframe>
-				<div class="portAnim">
-				<div class="cvT2"> Morrowind Animation </div>
-				Self-taught project. The 3D files are from the videogame Morrowind made by Bethesda. I extracted the files, reconstructed the scene, added lights and effects and animated the characters. <br />
-				It was done in Blender.
-				</div>
-				<iframe class="videoLive" allowfullscreen src="https://www.youtube.com/embed/1od5GxeVlq8"> </iframe>
-				<div class="portLive">
-				<div class="cvT2"> Live action - Photogrammetry </div>
-				Photogrammetric object in a live video, made with an original HDRI. Pieces of software used: Reality Capture, Nuke, Maya, Blender, Instant Mesh.
-				</div>
-				<img class="imageHyper"  src="img/Hyper.png"> </iframe>
-				<div class="portHyper">
-				<div class="cvT2"> Maya scene </div>
-				Maya scene entirely in 3D. Modelling, lighting and somes texturing made by me.
-				</div>
-			</div>
 			</div>
 			
 			<div id ="CVTitle" ></div>
@@ -139,45 +207,45 @@
 			<div class="gridOI">
 				<div class="gridOIMontage">
 				<div class="cvT2">Editing:</div>
-					<img class="logo" src="img/pp.png"> Premier Pro<br />
-					<img class="logo" src="img/davres.png"> Davinci Resolve<br />
-					<img class="logo" src="img/mediacomp.png"> Media Composer<br />
-					<img class="logo" src="img/finalcut.png"> Final Cut
+					<img class="logo" src="img/logo/pp.png"> Premier Pro<br />
+					<img class="logo" src="img/logo/davres.png"> Davinci Resolve<br />
+					<img class="logo" src="img/logo/mediacomp.png"> Media Composer<br />
+					<img class="logo" src="img/logo/finalcut.png"> Final Cut
 				</div>
 				<div class="gridOI3D">
 				<div class="cvT2">3D:</div>
-					<img class="logo" src="img/blender.png"> Blender <br />
-					<img class="logo" src="img/unreal.png"> Unreal Engine <br />
-					<img class="logo" src="img/maya.png" > Maya<br />
-					<img class="logo" src="img/houdini.png" > Houdini<br />
-					<img class="logo" src="img/3ds.png" > 3DS max<br />
-					<img class="logo" src="img/subpaint.png" > Substance Painter<br />
+					<img class="logo" src="img/logo/blender.png"> Blender <br />
+					<img class="logo" src="img/logo/unreal.png"> Unreal Engine <br />
+					<img class="logo" src="img/logo/maya.png" > Maya<br />
+					<img class="logo" src="img/logo/houdini.png" > Houdini<br />
+					<img class="logo" src="img/logo/3ds.png" > 3DS max<br />
+					<img class="logo" src="img/logo/subpaint.png" > Substance Painter<br />
 				</div>
 				<div class="gridOICompositing">
 				<div class="cvT2">Compositing:</div>
-					<img class="logo" src="img/nuke.png" > Nuke<br />
-					<img class="logo" src="img/ae.png" > After Effects<br />
-					<img class="logo" src="img/ps.png" > Photoshop 
+					<img class="logo" src="img/logo/nuke.png" > Nuke<br />
+					<img class="logo" src="img/logo/ae.png" > After Effects<br />
+					<img class="logo" src="img/logo/ps.png" > Photoshop 
 				</div>
 				<div class="gridOIAudio">
 				<div class="cvT2">Audio:</div>
-					<img class="logo" src="img/protools.png"> ProTools <br />
-					<img class="logo" src="img/fl.png"> FL Studio
+					<img class="logo" src="img/logo/protools.png"> ProTools <br />
+					<img class="logo" src="img/logo/fl.png"> FL Studio
 				</div>
 				<div class="gridOIProgrammation">
 				<div class="cvT2">Programming:</div>
-					<img class="logo" src="img/python.png"> Python<br />
-					<img class="logo" src="img/c++.png"> C++<br />
-					<img class="logo" src="img/c.png"> C<br />
-					<img class="logo" src="img/html.png"> HTML/CSS/Javascript<br />
-					<img class="logo" src="img/lua.png"> LUA<br />
-					<img class="logo" src="img/java.png"> Java<br />
+					<img class="logo" src="img/logo/python.png"> Python<br />
+					<img class="logo" src="img/logo/c++.png"> C++<br />
+					<img class="logo" src="img/logo/c.png"> C<br />
+					<img class="logo" src="img/logo/html.png"> HTML/CSS/Javascript<br />
+					<img class="logo" src="img/logo/lua.png"> LUA<br />
+					<img class="logo" src="img/logo/java.png"> Java<br />
 				</div>
 				<div class="gridIOBureautique">
 				<div class="cvT2">Office software:</div>
-					<img class="logo" src="img/libreoff.png"> Libre Office<br />
-					<img class="logo" src="img/openoff.png"> Open Office<br />
-					<img class="logo" src="img/microoff.png"> Microsoft Office<br />
+					<img class="logo" src="img/logo/libreoff.png"> Libre Office<br />
+					<img class="logo" src="img/logo/openoff.png"> Open Office<br />
+					<img class="logo" src="img/logo/microoff.png"> Microsoft Office<br />
 				</div>
 			</div>
 			</div>
