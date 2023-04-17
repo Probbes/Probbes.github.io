@@ -12,14 +12,17 @@ function funcButton(i){
 var x = 0;
 function tellY(){
 	var header = document.getElementById("headerid");
+	var drapeau = document.getElementById("drapeauID");
 	if(window.pageYOffset > 110){
 		header.style.animation = ("header-size1 0.5s forwards");
+		drapeau.style.animation=("drapeau1 0.5s forwards");
 		x=x+1;
 	}
 	else if (window.pageYOffset < 110 && x != 0){
 		header.style.animation = ("header-size2 0.5s forwards");
+		drapeau.style.animation=("drapeau2 0.5s forwards");
 		x=x+1;
-		console.log(x);
+		// console.log(x);
 	}
 }
 
@@ -34,3 +37,20 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 window.addEventListener("scroll", event => tellY());
+
+
+
+const items = document.querySelectorAll('.portItem');
+
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    // Remove the active class from all items
+    items.forEach(item => {
+      item.classList.remove('active');
+    });
+    // Add the active class to the clicked item
+    item.classList.add('active');
+
+  });
+});
+
