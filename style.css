@@ -488,6 +488,16 @@ iframe{
 		width: 50%;
 		font-size:1.9vw;
 	}
+	
+	.portItem.active iframe {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 50%;
+	  height: 100%;
+	  object-fit: cover;
+	  display: inline flex;
+	}
 
 }
 
