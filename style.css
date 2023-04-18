@@ -257,13 +257,14 @@ iframe{
 }
 
 .portItem.active .portImageDeux {
-	  position: absolute;
-  top: 0;
-  left: 0;
-  width: 70%;
-  height: 100%;
-  object-fit: cover;
-  display: inline flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 65%;
+	height: 65;
+	object-fit: cover;
+	display: inline flex;
+	margin-top:8%;
 }
 
 .portItem iframe {
