@@ -269,6 +269,7 @@ iframe{
 
 .portItem iframe {
   display: none;
+  
 }
 
 .portItem.active iframe {
@@ -279,6 +280,7 @@ iframe{
   height: 100%;
   object-fit: cover;
   display: inline flex;
+  
 }
 
 /* .portItem.active .imgact { */
