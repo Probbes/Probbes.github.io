@@ -263,7 +263,7 @@ iframe{
 	width: 65%;
 	height: 65;
 	object-fit: cover;
-	display: inline flex;
+	display: block;
 	margin-top:8%;
 }
 
@@ -279,7 +279,7 @@ iframe{
   width: 70%;
   height: 100%;
   object-fit: cover;
-  display: inline flex;
+  display: block;
   
 }
 
