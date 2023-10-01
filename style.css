@@ -231,7 +231,8 @@ iframe{
 	position: relative;
 	background: black;
 	width:100%;
-	height:200px;
+	height:150px;
+	overflow: hidden;
 }
 
 .portItem .portImage{
@@ -321,6 +322,43 @@ iframe{
 }
 
 
+.portcontainer {
+	padding: 20px;
+	padding-bottom: 60px;
+	display: flex; /* Use Flexbox */
+	flex-wrap: wrap; /* Enable wrapping to handle small screens */
+	justify-content: space-between; /* Spacing between elements */
+    }
+
+.portVid {
+	margin:0vw;
+	margin-right:2vw;
+	margin-left:2vw;
+	margin-top:-4vw;
+    }
+	
+.portVid iframe {
+	width: 30vw;  
+    height: 17vw;
+	border: none; /* Remove iframe border */
+}
+
+.portGithub img {
+    width: 10vw;
+	height: 10vw;
+	margin-right:8vw;
+}
+
+.portImage{
+	width: 100%;
+	height: 100%;
+	transform: scale(1.0);
+	transition: transform 0.3s ease-in-out;
+}
+
+.portImage:hover {
+  transform: scale(1.2);
+}
 
 /* KEYFRAMES ------------------------------------------------------ */
 	
@@ -500,6 +538,32 @@ iframe{
 	  height: 100%;
 	  object-fit: cover;
 	  display: inline flex;
+	}
+	
+	.portcontainer {
+		padding: 20px;
+		padding-bottom: 60px;
+		display: flex; /* Use Flexbox */
+		flex-wrap: wrap; /* Enable wrapping to handle small screens */
+		justify-content: space-between; /* Spacing between elements */
+    }
+
+	.portVid {
+		margin:0vw;
+		margin-top:-2vw;
+	}
+		
+	.portVid iframe {
+		width: 75vw;  
+		height: 42vw;
+		border: none; /* Remove iframe border */
+	}
+
+	.portGithub img {
+		width: 30vw;
+		height: 30vw;
+		margin-left:50%;
+		margin-top:5vh;
 	}
 
 }
