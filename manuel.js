@@ -11,10 +11,10 @@ showMoreBtns.forEach(function(btn) {
         // Toggle the visibility of the target element
         if (targetElement.classList.contains('hidden')) {
             targetElement.classList.remove('hidden');
-            btn.textContent = 'Show Less';
+            btn.textContent = '-';
         } else {
             targetElement.classList.add('hidden');
-            btn.textContent = 'Show More';
+            btn.textContent = '+';
         }
     });
 });

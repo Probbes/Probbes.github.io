@@ -1,5 +1,5 @@
 body{
-	background-color:#F7F4F3;
+	background-color:#eee1dd;
 	width:100%;
     
 }
@@ -23,4 +23,23 @@ ul{
 
 strong{
     font-size: 2.5vb;
+}
+
+button{
+    font-size: 1.5vb;
+    margin : 0.2vb;
+    margin-left : 0.7vw;
+    background-color: #f59e64; /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    padding : 0.2vw;
+    padding-left : 0.4vw;
+    padding-right : 0.4vw;
+}
+
+.img1{
+    width: auto;
+    height : 40%;
 }
