@@ -1,9 +1,219 @@
 <html>
-<head>
-    <title>Manuel de Photogrammetrie</title>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <title>Manuel de photogrammétrie</title>
+        <link rel="stylesheet" href="manuel.css" />
+    </head>
 <body>
-   <h1> Manuel de photogrammétrie pour la collection de zoologie </h1>
-   <p>Cliquez ici pour ouvrir le pdf <a href="Manuel.pdf"> lien  </a></p>
+    <div class="text">   <h1>Introduction</h1>
+        Ce document est un manuel permettant de réaliser des projets de photogrammétrie
+        pour une collection de Zoologie. Il a été créé et écrit par Antoine Megevand, étudiant
+        à l’université de Valenciennes en parcours post-production et stagiaire en
+        photogrammétrie à l’université Paul Sabatier de Toulouse.
+        Cette première version de ce document a pour but d’expliquer de A à Z la création
+        d’un modèle 3D d’un squelette grâce à la technique de photogrammétrie. De futures
+        révisions peuvent survenir.
+        <h3>Matériels et logiciels</h3>
+        Un ordinateur portable avec Reality Capture, Blender, Photoshop avec CameraRaw.
+        Un appareil pouvant prendre des photos. Ici Iphone 14 pro.
+    </div> 
+
+    <div class="text">
+        <h1>Partie 1 : La prise de vue</h1>
+        La prise de vue est considérée en photogrammétrie comme la partie la plus
+        importante. La majorité des erreurs qui surviennent lors de
+        l’alignement sur ordinateur sont dus à un problème de photos. C’est pourquoi il faut
+        préparer rigoureusement l'appareil et le sujet.
+
+        <h3>L’Iphone :</h3>
+        L’Iphone doit avoir certains réglages pour pouvoir récuperer le plus de details :
+
+            <ul>
+            <li>
+                Le Raw <button class="showMoreBtn" data-target="moreText1">Voir plus</button>
+                <div id="moreText1" class="hidden hiddentext">
+                    <p>Les photos prisent par n’importe quel appareil doit sortir en
+                    “Raw”, qui est un format de fichier non compressé, ce qui signifie qu’il n’y a aucune perte de détails dû à la compression.</p>
+                    <p>Le fichier raw de l’IPhone s’appelle l’ “Apple ProRaw” et est un format .dng.</p>
+                </div>
+            </li>
+            <li>
+                Réglages de caméra <button class="showMoreBtn" data-target="moreText2">Voir plus</button>
+                <div id="moreText2" class="hidden hiddentext">
+                    <p>Idéalement, l'exposition, la mise au point, l'objectif et la balance des blancs ne doivent pas changer.</p>
+                    <p>Sur IPhone, on peut rester appuyé longtemps sur une partie de l'écran pour bloquer ces paramètres.</p>
+                </div>
+            </li>
+            <li>
+                Zoomer <button class="showMoreBtn" data-target="moreText3">Voir plus</button>
+                <div id="moreText3" class="hidden hiddentext">
+                    <p>Le sujet doit rester net sur toutes les photos.</p>
+                    <p>Pour de petits sujets, il peut être conseillé de reculer et de zoomer pour augmenter la profondeur de champ.</p>
+                </div>
+            </li>
+            </ul>
+
+            <h3>L’objet et ses alentours :</h3>
+            <p>On peut prendre en photo l'objet dans deux environnements différents : </p>
+            <ul>
+                <li>Dans un environnement uniforme (boite à lumière).<button class="showMoreBtn" data-target="moreText4">Voir plus</button>
+                    <div id="moreText4" class="hidden hiddentext">
+                        <p>Cela permet d'aligner les photos en ne prenant en compte que l'objet.</p>
+                    </div></li>
+                <li>Dans un environnement non uniforme (un bureau).<button class="showMoreBtn" data-target="moreText5">Voir plus</button>
+                    <div id="moreText5" class="hidden hiddentext">
+                        <p>Cela permet d'aligner les photos en prenant en compte l'environnement autour de l'objet. Il faut donc
+                            un environnement le moins uniforme possible pour permettre au logiciel d'identifier des points d'ancrages.</p>
+                    </div></li>
+            </ul>
+            <p>On utilise des marqueurs pour nous permettre de plus facilement aligner l'objet.</p>
+            <ul>
+                <li>Des marqueurs sur le sujet.<button class="showMoreBtn" data-target="moreText6">Voir plus</button>
+                    <div id="moreText6" class="hidden hiddentext">
+                        <p>Ces marqueurs permettent d'aligner le sujet quand il n'y a pas d'environnement. Cela implique une 
+                            étape supplémentaire de nettoyage.</p>
+                    </div></li>
+                <li>Des marqueurs autour du sujet.<button class="showMoreBtn" data-target="moreText7">Voir plus</button>
+                    <div id="moreText7" class="hidden hiddentext">
+                        <p>Ces marqueurs permettent d'aligner le sujet quand il n'y a pas d'environnement. Cela implique une 
+                            étape supplémentaire de nettoyage.</p>
+                    </div></li>
+            </ul>
+            <h3>Traitement d’image pré alignement</h3>
+            <b>Cette étape n’est pas nécessaire</b>
+            <p>Reality Capture possède un traitement d’image intégré qui permet au logiciel de
+            mieux relever les détails des photos. Il peut cependant être préférable de traiter
+            soi-même les images au préalable. On utilise ici le module Camera Raw d' Adobe
+            Photoshop. </p>
+
+            <button class="showMoreBtn" data-target="moreText8">Voir plus</button>
+            <div id="moreText8" class="hidden hiddentext">
+                Une fois que les photos prises ont été transférées sur l’ordinateur, on peut ouvrir
+                photoshop, appuyer sur “Ouvrir” et sélectionner toutes les photos (.dng).
+                CameraRaw va s’ouvrir avec toutes les photos. Cliquez sur n’importe laquelle et
+                appuyez sur ctrl+A pour toutes les sélectionner. Maintenant, chaque modification
+                faite se fera sur toutes.
+
+                <p>À droite, il faut donc paramétrer les images pour avoir le plus de détails possible et
+                    enlever le plus d’informations inutiles.</p>
+                <ul>
+                    <li> Il faut monter le niveau et l’exposition pour éclaircir l’image sans surexposer
+                    l’image (la courbe ne doit pas s'aplatir sur la droite).</li>
+                    <li> Baisser un peu le contraste</li>
+                    <li> Bien descendre les tons clairs et monter les tons foncés</li>
+                    <li> Baisser un peu les blancs et monter un peu les noirs</li>
+                    <li> Faire une balance des blancs (couleur -> balance des blancs -> auto)</li>
+                    <li> augmenter un peu la saturation</li>
+                    <li> réduire le bruit manuellement et augmenter la luminance</li>
+                    <li> supprimer l'aberration chromatique et faire un correctif de profil</li>
+                </ul>
+
+                <p>Notez que si le sujet a beaucoup de détails et n’est pas lisse, cette étape n’est pas
+                    nécessaire. Il est nécessaire de traiter l’image si le sujet ne présente pas beaucoup
+                    de détails. Cette étape consiste à les faire ressortir.</p>
+            </div>
+        </div>
+        <div class = "text">
+            <h1>Partie 2 : Traitement de l’image sur Reality Capture</h1>
+            <p>Cas 1 : l'entiéreté de la prise de vue a été faite sans que le sujet bouge (ex : un objet immovible).</p>
+            <p>Voici les étapes sur RC : </p>
+            <ul>
+                <li>L'importation<button class="showMoreBtn" data-target="moreText9">Voir plus</button>
+                    <div id="moreText9" class="hidden hiddentext">
+                        <p>On importe les photos (.dng) sur Reality Capture (ex : glisser déposer)</p>
+                    </div></li>
+                <li>L'alignement<button class="showMoreBtn" data-target="moreText10">Voir plus</button>
+                    <div id="moreText10" class="hidden hiddentext">
+                        <p>Le bouton <i>Align Images</i> va rassembler les photos et produire un nuage de point 
+                        qui correspond à la forme de l'objet. </p>
+                        <p>Si tout se passe bien, il ne doit avoir qu'un seul <i>component</i>, ce qui signifie que le logiciel a compris que
+                            toutes les images appartiennent à un seul sujet.</p>
+                    </div></li>
+                <li>Les controls points<button class="showMoreBtn" data-target="moreText11">Voir plus</button>
+                    <div id="moreText11" class="hidden hiddentext">
+                        <p>Si le logiciel fait plusieurs <i>component</i>, alors il faut manuellement créer des points d'ancrage entre ces différentes 
+                        parties pour faire comprendre à Reality Capture qu'on ne veut qu'un seul sujet.</p>
+                        <p>Pour cela, il faut aller dans <i>SCENE 3D -> TOOLS -> Control Points</i>.</p>
+                        <p>Les points de controls doivent être appliqués dans la vue 3D du logiciel. Ils doivent ensuite être 
+                            confirmés.</p>
+                        <p>Pour que deux <i>components</i> fusionnent, il faut au moins 3 points de controls en commun.</p>
+                        <p>Pour plus d'informations, voir cette <a href="https://youtu.be/3mLBL7T-zgs?si=pL0zuhF5xveOtGJA&t=736">vidéo</a>.</p>
+                    </div></li>
+                <li>La reconstruction 3D<button class="showMoreBtn" data-target="moreText12">Voir plus</button>
+                    <div id="moreText12" class="hidden hiddentext">
+                        <p>Le logiciel transforme le nuage de points en modèle 3D.</p>
+                        <p><i>MESH MODEL -> Normal Detail</i> ou <i>WORKFLOW -> Calculate Model</i></p>
+                    </div></li>
+                <li>Le lissage<button class="showMoreBtn" data-target="moreText13">Voir plus</button>
+                    <div id="moreText13" class="hidden hiddentext">
+                        <p>Le logiciel peut ensuite lisser l'objet et le simplifier, diminuant son nombre de vertex, et donc sa taille 
+                            en ne perdant pas de details.</p>
+                        <p><i>SCENE 3D -> TOOLS -> Simplify Tool</i> ou <i>WORKFLOW -> Simplify Tool</i></p>
+                    </div></li>
+                <li>Le texturing<button class="showMoreBtn" data-target="moreText14">Voir plus</button>
+                    <div id="moreText14" class="hidden hiddentext">
+                       <p> On peut ensuite appliquer une texture au modèle 3D ce qui va lui donner sa couleur.</p>
+                       <p><i>MESH MODEL -> Texture</i> ou  <i>WORKFLOW -> Texture</i></p>
+                    </div></li>
+                <li>L'exportation<button class="showMoreBtn" data-target="moreText15">Voir plus</button>
+                    <div id="moreText15" class="hidden hiddentext">
+                        <p>Le modèle avec sa texture peuvent être exportés dans le dossier choisi. Une fenêtre s'ouvre pour appliquer certains paramètres,
+                           il faut juste cliquer sur OK  </p>
+                        <p><i>WORKFLOW->Export->Wavefront obj</i> ou <i>SCENE 3D -> TOOLS -> Mesh and PointCloud</i></p>
+                    </div></li>
+            </ul>
+            <p>Cas 2 : le sujet a dû être bougé pour le prendre sous plusieurs angles différents (ex : un crâne à l'endroit et à l'envers) </p>
+            <p>Voici les étapes sur RC : </p>
+            <ul> <strong>Pour chaque angles</strong>
+                <li>L'importation d'un angle<button class="showMoreBtn" data-target="moreText16">Voir plus</button>
+                    <div id="moreText16" class="hidden hiddentext">
+                        <p>Il faut importer dans RC seulement les photos du sujet sous un seul angle.</p>
+                    </div></li>
+                <li>L'alignement</li>
+                <li>Les controls points</li>
+                <li>La reconstruction 3D</li>
+                <li>L'exportation en masque<button class="showMoreBtn" data-target="moreText17">Voir plus</button>
+                    <div id="moreText17" class="hidden hiddentext">
+                        <p>Attention, seul le sujet doit être exporté en masque, qu'on exporte dans le même dossier que les photos.
+                            Pour n'exporter que le sujet, on reduit la zone de reconstruction qu'à l'objet.</p>
+                        <p><i>SCENE 3D -> TOOLS -> Depth and Mask</i></p>
+                        <p>Pourquoi exporter le masque ? Qu’est ce qu’un masque ? <button class="showMoreBtn" data-target="moreText18">Voir plus</button>
+                            <div id="moreText18" class="hidden hiddentext">
+                                
+                                <p>Un masque est un outil de traitement d’image permettant à un logiciel de définir ce
+                                    qu’il doit prendre en compte ou non. C’est une image en niveau de gris, où le blanc
+                                    correspond à visible à 100% et le noir à 0%.</p>
+                                <p>On peut voir ici que si on applique le
+                                    masque sur l’image, seulement le
+                                    crâne est visible car la partie
+                                    blanche du masque a la même
+                                    forme que le crâne</p>
+                                <p>On utilise le masque pour ce type de projet car on veut fusionner la partie endroit et
+                                    envers du crâne, hors la table ne bouge pas. Bouger le sujet sans bouger
+                                    l’environnement est une grave source d’erreur en photogrammétrie. Il faut un moyen
+                                    de donner au logiciel les deux facettes du crâne sans l’environnement. C’est ici que
+                                    les masques entrent en jeu car grâce à eux, on donne au logiciel le sujet sans
+                                    l’environnement. Il peut donc facilement comprendre que le sujet est à l’envers sur la
+                                    moitié des photos prises et le retourner facilement pour ensuite fusionner les deux
+                                    lors de l’alignement.</p>
+                            </div></p>
+                    </div></li>
+            </ul>
+            <ul> <strong>La fusion des différents angles</strong>
+                <li>L'importation de tous les angles<button class="showMoreBtn" data-target="moreText19">Voir plus</button>
+                    <div id="moreText19" class="hidden hiddentext">
+                        <p>Il faut importer toutes les photos avec leurs masques. </p>
+                    </div></li>
+                <li>L'alignement</li>
+                <li>Les controls points</li>
+                <li>La reconstruction 3D</li>
+                <li>Le lissage</li>
+                <li>Le texturing</li>
+                <li>L'exportation</li>
+            </ul>
+                
+            </div>
+    </div>
+    <script src="manuel.js"></script>
 </body>
 </html>
