@@ -1,5 +1,6 @@
 body{
 	background-color:#f6eeec;
+    text-align: justify;
 }
 
 /* .textZone{
@@ -12,10 +13,10 @@ body{
 
 .textZone{
     background-color:#dbbeb7;
-    margin:10%;
+    margin:5%;
     margin-top:-10%;
     margin-bottom:-10%;
-    padding:5%;
+    padding:3%;
     padding-top:15%;
 }
 
