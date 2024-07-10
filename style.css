@@ -230,15 +230,15 @@ iframe{
 .portItem{
 	position: relative;
 	background: black;
-	width:100%;
-	height:150px;
+	width: 21vw;
+	height: 10vw;
 	overflow: hidden;
 }
 
 .portItem .portImage{
-	width: 100%;
-	height: 100%;
 	object-fit: cover;
+	width: 21vw;
+	height: 10vw;
 }
 
 .portItem.active {
@@ -247,6 +247,7 @@ iframe{
   position: relative;
   padding-bottom: 56.25%;
   height: auto !important;
+  width: 100%;
 }
 
 .portItem.active .portImage {
@@ -283,17 +284,6 @@ iframe{
   display: block;
   
 }
-
-/* .portItem.active .imgact { */
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  /* width: 70%; */
-  /* height: 100%; */
-  /* object-fit: cover; */
-  /* display: none; */
-  /* visibility: hidden; */
-/* } */
 
 .portItem.active .info {
 	position: absolute;
@@ -349,15 +339,28 @@ iframe{
 	margin-right:8vw;
 }
 
-.portImage{
-	width: 100%;
-	height: 100%;
+.portHover{
 	transform: scale(1.0);
-	transition: transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out, font-size 0.1s ease-out;
+	user-select: none; /* prevent selection of the text */
+	font-size: 0vw;
+
 }
 
-.portImage:hover {
-  transform: scale(1.2);
+.portHover:hover {
+	transform: scale(1.2);
+	font-size: 0.8vw;
+  }
+
+.portText{
+	color : white;
+	text-shadow: 1px 1px 2px black;
+	font-weight:900;
+	text-align:center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 /* KEYFRAMES ------------------------------------------------------ */

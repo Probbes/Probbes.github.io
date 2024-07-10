@@ -3,14 +3,6 @@ body{
     text-align: justify;
 }
 
-/* .textZone{
-    background-color:#dab7ad;
-    margin:10%;
-    margin-top : -15vh;
-    margin-bottom : -20vh;
-    padding:100px;
-} */
-
 .textZone{
     background-color:#dbbeb7;
     margin:5%;
@@ -58,4 +50,8 @@ button{
 .img1{
     width: 50%;
     height : auto;
+}
+
+.portText{
+    font-size: 1000px;
 }
